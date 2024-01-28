@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="container">
+        <input type="text" class="form-control" placeholder="Search by Name" [(ngModel)]="searchTerm" (input)="onSearch()">
+        <p>{{errmsg}}</p>
+     </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Role</th>
+                <th>User Email</th>
+                <th>User Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                    <td>{{u.userId}}</td>
+                    <td>{{u.name}}<span *ngIf="u.type=='Verified'" class="verified">✔</span></td>
+                    <td>{{u.role}}</td>
+                    <td>{{u.userEmail}}</td>
+                    <td>{{u.type}}</td>
+                    <td colspan="2">                    
+                        <div *ngIf="u.type !== 'Admin' && u.type !=='Blocked'">
+                            <button class="btn btn-primary" (click)="blockfn(u.userId)">Block</button>
+                        </div>
+                    </td>
+                    <td><button class="btn btn-primary" (click)="postByUser(u.userId)">Posts</button></td>
+            </tr>
+        </tbody>
+    </table> 
+</div>

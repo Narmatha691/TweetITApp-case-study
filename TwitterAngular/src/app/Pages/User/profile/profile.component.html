@@ -1,0 +1,23 @@
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h3>User Profile</h3>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>User ID:</strong>  {{user.userId}}</li>
+              <li class="list-group-item"><strong>User Name:</strong> {{user.name}}<span *ngIf="user.type=='Verified'" class="verified">✔</span></li>
+              <li class="list-group-item"><strong>Role:</strong> {{user.role}}</li>
+              <li class="list-group-item"><strong>User Email:</strong> {{user.userEmail}}</li>
+              <li class="list-group-item"><strong>User Type:</strong> {{user.type}}</li>
+              <li *ngIf="role === 'User'" class="list-group-item"><strong>Status for Upgrade:</strong> {{user.status}}</li>
+            </ul>
+            <button *ngIf="following" class="btn btn-primary" (click)="followRequest(user.userId)">Follow Request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

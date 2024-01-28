@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="mt-4 mb-4">Posts List</h2>
+    <div class="mb-4">
+      <input type="text" class="form-control" placeholder="Search by Title" [(ngModel)]="searchTerm" (input)="onSearch()">
+    </div>
+    <div class="row">
+      <div *ngFor="let post of posts" class="col-lg-4 col-md-6 mb-4">
+  
+        <div class="card border-dark">
+          <img *ngIf="post.img" [src]="createImgPath(post.img)" alt="Post Image" class="card-img-top custom-image">
+          <div class="card-body">
+            <h5 class="card-title">{{ 'Title: ' + post.title }}</h5>
+            <p *ngIf="post.description!=null" class="card-text">{{ 'Description: ' + post.description }}</p>
+            <p class="card-text">{{ 'User Name: ' + post.userName }}
+              <span *ngIf="post.userType=='Verified'" class="verified">✔</span></p>
+            <p class="card-text">{{ 'Date and Time: ' + (post.dateandTime | date:'yyyy-MM-dd HH:mm') }}</p>
+            <button type="submit" class="btn btn-primary" (click)="viewpost(post.postId)">View Post</button>
+          </div>
+        </div>
+        <hr>
+        <div *ngIf="visitUserId==userId">
+          <button class="btn btn-primary" (click)="edit(post.postId)">Edit</button>
+          <button class="btn btn-primary float-right" (click)="delete(post.postId)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

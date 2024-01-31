@@ -37,6 +37,7 @@ export class RegisterComponent {
   onSubmit(): void {
     console.log(JSON.stringify(this.user));
     console.log(this.user);
+    this.user.role="User";
     this.http.post('http://localhost:5250/api/User/Register',this.user,this.httpOptions)
     .subscribe(
       (response:any)=>{

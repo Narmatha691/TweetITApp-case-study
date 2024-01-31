@@ -18,6 +18,7 @@ export class LoginComponent {
   user:any;
   errMsg: string = '';
   httpResponse: any;
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

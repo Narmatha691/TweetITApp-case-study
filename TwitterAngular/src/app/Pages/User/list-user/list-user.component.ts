@@ -41,6 +41,7 @@ export class ListUserComponent {
     .get<UserDTO[]>('http://localhost:5250/api/User/GetAllUsers',this.httpOptions)
     .subscribe((response)=>{
       this.users=response;
+      console.log(this.users);
       this.users = this.users.filter(user => user.role !== 'Admin');
       console.log(this.users);
       console.log(this.searchUserId);

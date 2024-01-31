@@ -7,7 +7,7 @@
 <div class="register-form p-5 border">
     <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
         <div class="form-group">
-            <label>User Id</label>
+            <label>User Name</label>
             <input type="text" class="form-control" name="userId" [(ngModel)]="user.userId" required
                 #userId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userId.errors }" />
             <div *ngIf="f.submitted && userId.errors" class="invalid-feedback">
@@ -17,7 +17,7 @@
 
 
         <div class="form-group">
-            <label>User Name</label>
+            <label>Name</label>
             <input type="text" class="form-control" name="userName" [(ngModel)]="user.name" required minlength="6"
                 maxlength="20" #userName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userName.errors }" />
             <div *ngIf="f.submitted && userName.errors" class="invalid-feedback">
@@ -32,7 +32,7 @@
         </div>
 
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>User Role</label>
             <select class="form-control" name="role" [(ngModel)]="user.role" required
                     #role="ngModel" [ngClass]="{ 'is-invalid': f.submitted && role.errors }">
@@ -43,7 +43,7 @@
             <div *ngIf="f.submitted && role.errors" class="invalid-feedback">
                 <div *ngIf="role.errors['required']">User Role is required</div>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="form-group">

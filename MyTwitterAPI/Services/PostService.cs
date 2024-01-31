@@ -105,7 +105,7 @@ namespace MyTwitterAPI.Services
                 List<Post> activeMatchingPosts = context.Posts
                         .Include(p => p.User)
                         .Where(p => p.Active == 1 && p.User.Type != "Blocked" &&
-                                    EF.Functions.Like(p.User.Name, $"%{searchUser}%") &&
+                                    EF.Functions.Like(p.User.UserId, $"%{searchUser}%") &&
                                     p.User.Type != "Blocked")
                         .OrderByDescending(p => p.DateandTime)
                         .ToList();

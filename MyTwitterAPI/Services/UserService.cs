@@ -103,7 +103,7 @@ namespace MyTwitterAPI.Services
             try
             {
                 List<User> users = context.Users
-            .Where(u => EF.Functions.Like(u.Name, $"%{searchTerm}%"))
+            .Where(u => EF.Functions.Like(u.UserId, $"%{searchTerm}%"))
             .ToList();
 
                 return users;

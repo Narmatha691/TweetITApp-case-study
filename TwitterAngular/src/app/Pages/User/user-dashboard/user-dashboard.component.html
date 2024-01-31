@@ -12,9 +12,9 @@
           <p>Welcome {{user.name}}!<span *ngIf="user.type=='Verified'" class="verified">✔</span></p>
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" [routerLink]="'profile/' + user.userId">View Profile</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="'edit-user/' + user.userId">Edit Profile</a>
               </li>   

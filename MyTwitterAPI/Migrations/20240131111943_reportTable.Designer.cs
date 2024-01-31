@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyTwitterAPI.Database;
 
@@ -11,9 +12,10 @@ using MyTwitterAPI.Database;
 namespace MyTwitterAPI.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20240131111943_reportTable")]
+    partial class reportTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,17 +220,11 @@ namespace MyTwitterAPI.Migrations
                     b.Property<DateTime>("ReportTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ReportUserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("SenderId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ReportId");
-
-                    b.HasIndex("ReportUserId");
 
                     b.HasIndex("SenderId");
 
@@ -385,19 +381,11 @@ namespace MyTwitterAPI.Migrations
 
             modelBuilder.Entity("MyTwitterAPI.Entities.Report", b =>
                 {
-                    b.HasOne("MyTwitterAPI.Entities.User", "ReportUser")
-                        .WithMany()
-                        .HasForeignKey("ReportUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("MyTwitterAPI.Entities.User", "Sender")
                         .WithMany()
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("ReportUser");
 
                     b.Navigation("Sender");
                 });

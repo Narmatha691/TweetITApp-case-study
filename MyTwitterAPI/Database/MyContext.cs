@@ -17,6 +17,7 @@ namespace MyTwitterAPI.Database
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Follower> Followers { get; set; }
         public DbSet<Like> Likes { get; set; }
+        public DbSet<Report> Reports { get; set; }
         public DbSet<CommentNotification> CommentNotifications { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

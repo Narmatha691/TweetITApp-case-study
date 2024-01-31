@@ -2,3 +2,51 @@
     display: flex;
     justify-content: flex-end;
   }
+  .disabled-button {
+    /* Add your styles for the disabled button, e.g., change the background color */
+    background-color: lightgray;
+    /* Add other styles as needed */
+  }
+
+  .captcha-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-code-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-code {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transform: skewX(-20deg); /* Add a bended text effect */
+  }
+  
+  .strike-through {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 5px;
+  }
+  
+  .captcha-input {
+    width: 150px;
+    margin-left: 10px;
+  }

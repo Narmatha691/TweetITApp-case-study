@@ -34,10 +34,26 @@
             </div>
         </div>
 
+        <div class="form-group captcha-container">
+            <label for="captcha" class="captcha-label">Captcha:</label>
+            <div class="captcha">
+                <div class="captcha-code-container">
+                    <!-- <span class="strike-through"></span> -->
+                    <span class="captcha-code" id="captchaCode">{{ captchaCode }}</span>
+                    <!-- <span class="strike-through"></span> -->
+                </div>
+                <input type="text" class="form-control captcha-input" name="captcha" [(ngModel)]="userInput" required
+                    #captcha="ngModel" [ngClass]="{ 'is-invalid': f.submitted && captcha.errors }" />
+                <div *ngIf="f.submitted && captcha.errors" class="invalid-feedback">
+                    <div *ngIf="captcha.errors['required']">Captcha is required</div>
+                </div>
+            </div>
+        </div>
+
         <div class="text-danger">{{errMsg}}</div>
        <div class="form-group ">
-            <button type="submit" class="btn btn-primary">Login</button>
-            <button type="button" (click)="onReset(f)" class="btn btn-warning float-right">
+            <button type="submit" class="btn btn-primary" [disabled]="isLoginButtonDisabled" [ngClass]="{'disabled-button': isLoginButtonDisabled}">Login</button>
+            <button type="button" (click)="onReset()" class="btn btn-warning float-right">
                 Reset
             </button>
         </div>

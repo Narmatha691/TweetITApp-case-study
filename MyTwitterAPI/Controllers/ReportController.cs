@@ -26,7 +26,7 @@ namespace MyTwitterAPI.Controllers
             this._logger = logger;
         }
         [HttpPost, Route("AddReport")]
-        //[Authorize(Roles = "User")]
+        [Authorize(Roles = "User")]
         //
         public IActionResult AddReport(ReportWithoutIDDTO report)
         {
@@ -44,7 +44,7 @@ namespace MyTwitterAPI.Controllers
             }
         }
         [HttpGet, Route("GetUnReadReports")]
-        //[Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin")]
         //
         public IActionResult GetUnReadReports()
         {
@@ -60,7 +60,7 @@ namespace MyTwitterAPI.Controllers
             }
         }
         [HttpGet, Route("GetReadReports")]
-        //[Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin")]
         //
         public IActionResult GetReadReports()
         {
@@ -76,7 +76,7 @@ namespace MyTwitterAPI.Controllers
             }
         }
         [HttpPut, Route("MarkAsRead/{reportId}")]
-        //[Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin")]
         //
         public IActionResult MarkAsRead(int reportId)
         {

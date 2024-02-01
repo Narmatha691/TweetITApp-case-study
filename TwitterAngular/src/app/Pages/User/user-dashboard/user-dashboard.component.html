@@ -38,8 +38,10 @@
                 <a *ngIf="user.type=='Normal'" class="nav-link" [routerLink]="'follower'">Following List</a>
               </li> 
               <li class="nav-item">
+                <a class="nav-link" [routerLink]="'report'">Report</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" (click)="logout()" href="login">Log out</a>
-                <!-- <button class="btn btn-primary " (click)="logout()">Log out</button> -->
               </li>
             </ul>
           </div>

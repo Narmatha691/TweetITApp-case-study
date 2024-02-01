@@ -8,7 +8,6 @@
             <tr>
                 <th>User Name</th>
                 <th>Name</th>
-                <th>Role</th>
                 <th>User Email</th>
                 <th>User Type</th>
             </tr>
@@ -17,7 +16,6 @@
             <tr *ngFor="let u of users">
                     <td>{{u.userId}}</td>
                     <td>{{u.name}}<span *ngIf="u.type=='Verified'" class="verified">✔</span></td>
-                    <td>{{u.role}}</td>
                     <td>{{u.userEmail}}</td>
                     <td>{{u.type}}</td>
                     <td colspan="2">                    

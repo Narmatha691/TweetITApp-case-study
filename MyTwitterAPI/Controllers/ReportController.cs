@@ -28,13 +28,62 @@ namespace MyTwitterAPI.Controllers
         [HttpPost, Route("AddReport")]
         //[Authorize(Roles = "User")]
         //
-        public IActionResult AddReport(Report report)
+        public IActionResult AddReport(ReportWithoutIDDTO report)
         {
             try
             {
-                report.ReportTime = DateTime.Now;
-               reportService.AddReport(report);
+                Report reportdto = _mapper.Map<Report>(report);
+                reportdto.ReportTime = DateTime.Now;
+                reportService.AddReport(reportdto);
                 return StatusCode(200, report);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet, Route("GetUnReadReports")]
+        //[Authorize(Roles = "User")]
+        //
+        public IActionResult GetUnReadReports()
+        {
+            try
+            {
+                List<ReportDTO> reports = reportService.GetUnReadReports();
+                return StatusCode(200, reports);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet, Route("GetReadReports")]
+        //[Authorize(Roles = "User")]
+        //
+        public IActionResult GetReadReports()
+        {
+            try
+            {
+                List<ReportDTO> reports = reportService.GetReadReports();
+                return StatusCode(200, reports);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpPut, Route("MarkAsRead/{reportId}")]
+        //[Authorize(Roles = "User")]
+        //
+        public IActionResult MarkAsRead(int reportId)
+        {
+            try
+            {
+                reportService.MarkAsRead(reportId);
+                return StatusCode(200);
             }
             catch (Exception ex)
             {

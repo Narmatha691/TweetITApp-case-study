@@ -18,5 +18,11 @@ export class AppComponent {
   home(){
     this.router.navigateByUrl('');
   }
+  contact(){
+    this.router.navigateByUrl('contact');
+  }
+  about(){
+    this.router.navigateByUrl('about');
+  }
   
 }

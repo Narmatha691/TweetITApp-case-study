@@ -1,0 +1,45 @@
+/* landing-page.component.css */
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAGoA0AMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/2gAIAQEAAAAA+nAAAX03HCKAD051vz8707c+vLgp6b58jXfU1rz9dyTnxhevTp5+fTe7GNbzqTF5ci+nXPWyZ1jdmsyZuuGY3063N56kllaYzZN8S3XXU53edSCyyYuIrfXWdgAYya4507azTNuJSVozmqtlPF0nTg6HRpZm3K7xbc3TnbclzWFBV3JuIZkWCgWG8yVYAAWGshYA/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/9oACgICEAMQAAAA9PzwAz0XWI599Y3xmsdZd8pvO5qauZbN8dYx1z1BEULg1iyXPXOhRBU1g1jO87DfKa1zm4mlsEUlJbBKEFAIpJaA/8QAKBAAAgIBAwMEAwADAAAAAAAAAAECESEQEjEDQVETICJxMEBCobHR/9oACAEBAAE/AP00m3RFRhHhWKUUrS5Jwc2mkNNNp/nh0o1nJPpO/iiHRX9ZPThn4nVjtljh6bZeGQtJuhzTReKIPsdaH9X7unGldG2PLgTSUnXspvsyMW3Qowj2G4pJs3xq7f0J2rV6dVXKKIQ2aNIqIopD+OM2Sbby/Yk28Eem7yRb06sEsrls2vwR6T/o9KFkYqNpFK2YlislJJpI2CW370cY3ffSyyy2ibtLPthGNXQ0+xlc640YkxstCmb/AAtWixvRUNxaolBoa1Xcg3RZjREJSnadcYEpeBvAmxszGLaWbHNqCdK2Xai/KJzcVGq4tjf+ix2tKfh6WN1Gu79yYnouX9MULFB2soy55eB2oxpj7vvSE5KPObJXKMbE5JUTV1fguRJ1hYPkv6MLKWSuo+7J/wA3zWRKzY3ds2ttr2xixKtOGUUvCKyUUVgrFCtDVmRooomsr6NpwK7GOPfRRsSF7MouQty7ly8ly8ltDcm7FOZm7s3zLndm+ZGT86sRKzLRsqsiZZHSyyxlHoypE+k413s6sXJqkUUejKrJdJxSzZHpO/lHAopXisCwXgssZYmXrY3gsss5aEorhI+I2sMz/lnpwsW1cJHxfYtYY5nN5xXtf4bLI8oRuV9jcj/rKjyz4+T4XyfDjcNLsykr+v0Fyi2Wx0xujcW9MaXh/oLleyXuXf6/D//EAB4RAAMAAgIDAQAAAAAAAAAAAAABEQIQEiEgMFFA/9oACAECAQE/APLmqc0J0bJTHLubydMX2VI5jyp1q9JahjrIupuE3BbeuRSlKUTKVlL4PFfSLrs4Ex+jSJpei/k//8QAIxEAAgIBAwQDAQAAAAAAAAAAAAECERIQITEDQWGREyBRMP/aAAgBAwEBPwD7fHKrF0pMaptCVsuuCcLWS50ohGnbOpHYUW+wuk+5GGI77UIUVk2xlom960hSY0mITvgb3LMvImhsuzIkktY3pgimUzHfkx35MWNDW5imNFIXGq6jfEWZSp7O0fK/x+zOfOL9icvKEyxm2l6XrivB6N/5fuq+v//Z');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #ff5733; /* Choose your desired color */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e64d26; /* Adjust hover color */
+  }
+  

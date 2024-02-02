@@ -19,11 +19,13 @@ import { NotFoundComponent } from './Pages/not-found/not-found.component';
 import { FollowerComponent } from './Pages/User/follower/follower.component';
 import { FollowingUserPostsComponent } from './Pages/Post/following-user-posts/following-user-posts.component';
 import { ReportComponent } from './Pages/User/report/report.component';
+import { HomeComponent } from './Pages/home/home.component';
 
 export const routes: Routes = [
-  { path:'',component:LoginComponent},
+  { path:'',component:HomeComponent},
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
+    { path: 'home', component: HomeComponent },
     { path:'register',component:RegisterComponent},
     { path:'login',component:LoginComponent},
         { path:'user-dashboard',component:UserDashboardComponent,

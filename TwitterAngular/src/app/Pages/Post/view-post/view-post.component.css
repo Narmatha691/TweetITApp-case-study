@@ -1,0 +1,11 @@
+.custom-image {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    transition: transform 0.3s ease; /* Add a transition effect for the transform property */
+  }
+  
+  .custom-image:hover {
+    transform: scale(1.1); /* Increase the scale on hover (zoom in) */
+  }
+  

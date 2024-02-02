@@ -27,14 +27,7 @@ export class RegisterComponent {
     this.user=new UserDTO();
   }
   
-  contact(){
-    this.router.navigateByUrl('contact');
-  }
-  about(){
-    this.router.navigateByUrl('about');
-  }
-
-  onSubmit(): void {
+   onSubmit(): void {
     console.log(JSON.stringify(this.user));
     console.log(this.user);
     this.user.role="User";

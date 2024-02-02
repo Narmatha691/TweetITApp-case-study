@@ -50,13 +50,6 @@ export class LoginComponent {
     return this.userInput === this.captchaCode;
   }
 
-    
-  contact(){
-    this.router.navigateByUrl('contact');
-  }
-  about(){
-    this.router.navigateByUrl('about');
-  }
 
   onSubmit(): void {
     if (!this.isLoginButtonDisabled) {

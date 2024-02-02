@@ -75,9 +75,26 @@ namespace MyTwitterAPI.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet, Route("GetReportsByUser/{userId}")]
+        [Authorize(Roles = "User")]
+        //
+        public IActionResult GetReportsByUser(string userId)
+        {
+            try
+            {
+                List<ReportDTO> reports = reportService.GetReportsByUser(userId);
+                return StatusCode(200, reports);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+        }
         [HttpPut, Route("MarkAsRead/{reportId}")]
         [Authorize(Roles = "Admin")]
-        //
+        
         public IActionResult MarkAsRead(int reportId)
         {
             try

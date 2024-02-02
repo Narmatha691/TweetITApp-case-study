@@ -9,5 +9,6 @@ namespace MyTwitterAPI.Services
         List<ReportDTO> GetUnReadReports();
         List<ReportDTO> GetReadReports();
         void MarkAsRead(int reportId);
+        List<ReportDTO> GetReportsByUser(string userId);
     }
 }

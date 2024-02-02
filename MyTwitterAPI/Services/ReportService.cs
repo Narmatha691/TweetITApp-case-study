@@ -67,5 +67,22 @@ namespace MyTwitterAPI.Services
             }
 
         }
+        List<ReportDTO> IReportService.GetReportsByUser(string userId)
+        {
+            try
+            {
+                Console.WriteLine(userId);
+                var reports = context.Reports
+                    .Where(report => report.SenderId == userId)
+                .ToList();
+
+                return _mapper.Map<List<ReportDTO>>(reports);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

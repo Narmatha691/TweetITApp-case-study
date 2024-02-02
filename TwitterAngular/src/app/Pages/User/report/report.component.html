@@ -1,0 +1,72 @@
+<div *ngIf="this.Role === 'Admin'">
+    <div class="container">
+        <h2 class="mt-4 mb-4">UnRead Reports</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sender UserName</th>
+                    <th>Report UserName</th>
+                    <th>Report Content</th>
+                    <th>Date and Time</th>
+                    <th>Mark as Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of unReadReports">
+                        <td>{{r.senderId}}</td>
+                        <td>{{r.reportUserId}}</td>
+                        <td>{{r.reportContent}}</td>
+                        <td>{{r.reportTime| date:'dd-MM-YYYY HH:mm'}}</td>
+                        <td>
+                            <input type="checkbox" [(ngModel)]="r.read" (change)="markAsRead(r.reportId)" />
+                        </td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+    
+    <div class="container">
+        <h2 class="mt-4 mb-4">Read Reports</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sender UserName</th>
+                    <th>Report UserName</th>
+                    <th>Report Content</th>
+                    <th>Date and Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of ReadReports">
+                        <td>{{r.senderId}}</td>
+                        <td>{{r.reportUserId}}</td>
+                        <td>{{r.reportContent}}</td>
+                        <td>{{r.reportTime| date:'dd-MM-YYYY HH:mm'}}</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+</div>
+<div *ngIf="this.Role === 'User'">
+    <div class="container">
+        <h2 class="mt-4 mb-4">My Reports</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Report UserName</th>
+                    <th>Report Content</th>
+                    <th>Date and Time</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of MyReports">
+                        <td>{{r.reportUserId}}</td>
+                        <td>{{r.reportContent}}</td>
+                        <td>{{r.reportTime| date:'dd-MM-YYYY HH:mm'}}</td>
+                        <td>{{ r.read === 1 ? 'Yes' : 'No' }}</td>
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+</div>

@@ -1,0 +1,74 @@
+/* Add this to your main styles or create a new stylesheet */
+
+.container {
+    margin-top: 50px; /* Adjust the margin-top as needed */
+  }
+  
+  .card {
+    border: 2px solid #6c757d; /* Grey border color */
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .card:hover {
+    border-color: #495057; /* Darker grey on hover */
+  }
+  
+  .card-header {
+    background-color: #6c757d; /* Grey background color */
+    color: #fff;
+  }
+  
+  .list-group-item {
+    border-color: #dee2e6;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .btn-primary {
+    background-color: #6c757d; /* Grey button color */
+    border-color: #6c757d;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #495057; /* Darker grey on hover */
+    border-color: #495057;
+  }
+  
+  .verified {
+    color: #28a745;
+  }
+  
+  .text-danger {
+    color: #dc3545;
+  }
+  
+  /* Optional: Add styling for the input and button in the report section */
+  #myInput {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  #myInput:hover {
+    border-color: #6c757d;
+  }
+  
+  button {
+    background-color: #6c757d; /* Grey button color */
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #495057; /* Darker grey on hover */
+  }
+  

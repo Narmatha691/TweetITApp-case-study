@@ -18,10 +18,10 @@
             <button *ngIf="following" class="btn btn-primary" (click)="followRequest(user.userId)">Follow Request</button>
             <button *ngIf="true" class="btn btn-primary" (click)="reportfn()">Report to Admin</button>
             <div *ngIf="reportbool">
-              <label for="myInput">Enter Text:</label>
+              <label for="myInput">Report content:</label>
               <input id="myInput" type="text" [(ngModel)]="textInput" />
               <button (click)="submit(user.userId)">Submit</button>
-              <div *ngIf="isEmpty"class="text-danger">report Text: </div>
+              <div *ngIf="isEmpty"class="text-danger">Can't be empty </div>
             </div>
           </div>
         </div>

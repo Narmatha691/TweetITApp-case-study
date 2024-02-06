@@ -7,3 +7,25 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.custom-header {
+    background-color: #8b8b8b; /* Change to your desired background color */
+    color: #ffffff; /* Change to your desired text color */
+    padding: 10px;
+    border-radius: 7px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .custom-header:hover {
+    background-color: #0056b3; /* Change to your desired hover background color */
+    transform: scale(1.05); /* Adjust the scale factor for the zoom effect */
+  }
+  
+  .custom-header button {
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-header button:hover {
+    background-color: #0056b3; /* Change to your desired button hover background color */
+  }
+  

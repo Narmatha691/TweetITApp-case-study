@@ -19,5 +19,73 @@
 
   .search-container {
     display: flex;
+    align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
   }
+
+  .container {
+    padding: 20px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .user-card {
+    border-left: 5px solid #007bff;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px; /* Adjust width as needed */
+    display: flex;
+    padding-left: 30px;
+  }
+  
+  .user-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .user-details {
+    flex: 1;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .user-label {
+    width: 80px; /* Adjust width as needed */
+    font-weight: bold;
+  }
+  
+  .user-value {
+    margin-left: 10px;
+  }
+  
+  .user-actions button {
+    margin-right: 10px;
+  }
+  
+  .verified {
+    color: #28a745; /* Verified label color */
+  }
+  

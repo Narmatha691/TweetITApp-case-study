@@ -1,0 +1,52 @@
+.report-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.report-item:hover {
+    transform: translateY(-5px);
+}
+
+.report-content {
+    padding: 15px;
+}
+
+.report-title {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.report-content p {
+    margin: 5px 0;
+}
+
+.report-item.unread {
+    border-left: 5px solid #007bff;
+}
+
+.report-item.read {
+    border-left: 5px solid #28a745;
+}
+
+.user-report {
+    border-left: 5px solid #ffc107;
+}
+
+.report-item label {
+    margin-left: 5px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.report-item {
+    animation: fadeIn 0.5s ease;
+}

@@ -12,11 +12,11 @@ body {
 
 .sidebar {
   width: 190px;
-  background-color: #484e53;
+  background-color: #8b8b8b;;
   color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .welcome-text {

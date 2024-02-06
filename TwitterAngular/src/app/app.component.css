@@ -8,6 +8,13 @@ a:hover {
     text-decoration: underline;
 }
 
+.custom-header .title {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-family: 'Arial', sans-serif; /* Change the font family */
+  font-weight: bold; /* Optionally adjust font weight */
+}
+
+
 .custom-header {
     background-color: #8b8b8b; /* Change to your desired background color */
     color: #ffffff; /* Change to your desired text color */
@@ -17,7 +24,8 @@ a:hover {
   }
   
   .custom-header:hover {
-    background-color: #0056b3; /* Change to your desired hover background color */
+    background-color: #979797;
+    color: #000000; /* Change to your desired hover background color */
     transform: scale(1.05); /* Adjust the scale factor for the zoom effect */
   }
   

@@ -53,11 +53,12 @@ export class ListUserComponent {
   }
 
  blockfn(userID:any){
+  console.log(userID);
     this.adminId=localStorage.getItem('userId');
-    this.action.adminUserId=this.adminId;
     this.action.userIdTo=userID;
+    this.action.adminUserId=this.adminId;
     console.log(this.action);
-    this.http.post('http://localhost:5250/api/User/BlockUser',this.action,this.httpOptions)
+    this.http.put('http://localhost:5250/api/User/BlockUser',this.action,this.httpOptions)
     .subscribe((response)=>{
       console.log(response);
       this.getAllUsers();

@@ -183,8 +183,6 @@ namespace MyTwitterAPI.Controllers
             {
                 string userIdTo = blockRequest.UserIdTo;
                 string adminUserId = blockRequest.AdminUserId;
-                Console.WriteLine(userIdTo);
-                Console.WriteLine(adminUserId);
                 var result = userService.BlockUser(userIdTo, adminUserId);
                 if (result.Success)
                 {

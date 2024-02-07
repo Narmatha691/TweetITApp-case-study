@@ -4,7 +4,7 @@
 
     <div class="mb-3">
       <label for="title" class="form-label">Title:</label>
-      <input type="text" class="form-control" id="title" [(ngModel)]="post.title" name="title" required
+      <input type="text" class="form-control " id="title" [(ngModel)]="post.title" name="title" required
              #title="ngModel" [ngClass]="{ 'is-invalid': f.submitted && title.invalid }">
       <div *ngIf="f.submitted && title.invalid" class="invalid-feedback">
         Please provide a valid title.

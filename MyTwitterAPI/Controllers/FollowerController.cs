@@ -34,10 +34,9 @@ namespace MyTwitterAPI.Controllers
         {
             try
             {
-                Console.WriteLine("HI");
                 followerService.SendFollowRequest(model.UserId,model.FollowerId);
                 _logger.Info("Follow Request successfully");
-                return StatusCode(200, "Follow Request successfully");
+                return StatusCode(200);
             }
             catch (Exception ex)
             {
@@ -53,7 +52,6 @@ namespace MyTwitterAPI.Controllers
         {
             try
             {
-                Console.WriteLine("HI");
                 followerService.AcceptFollowRequest(model.UserId, model.FollowerId);
                 _logger.Info("Follow Request successfully");
                 return StatusCode(200);

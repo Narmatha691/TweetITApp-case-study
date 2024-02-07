@@ -1,62 +1,43 @@
 <div *ngIf="user.type=='Verified'" class="container">
     <h2 class="mt-4 mb-4">Follow Request</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>User Email</th>
-                <th>User Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let u of users">
-                    <td>{{u.name}}<span *ngIf="u.type=='Verified'" class="verified">✔</span></td>
-                    <td>{{u.userEmail}}</td>
-                    <td>{{u.type}}</td>
-                    <td><button class="btn btn-primary" (click)="acceptRequest(u.userId)">Accept</button></td>
-            </tr>
-        </tbody>
-    </table> 
+    <div class="card-container">
+        <div class="card" *ngFor="let u of users">
+            <div class="card-body">
+                <h5 class="card-title">{{u.name}} <span *ngIf="u.type=='Verified'" class="verified">✔</span></h5>
+                <p class="card-text">User Id: {{u.userId}}</p>
+                <p class="card-text">Email: {{u.userEmail}}</p>
+                <!-- <p class="card-text">User Type: {{u.type}}</p> -->
+                <button class="btn btn-primary" (click)="acceptRequest(u.userId)">Accept</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div *ngIf="user.type=='Verified'" class="container">
     <h2 class="mt-4 mb-4">Followers</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                 <th>User Email</th>
-                <th>User Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let u of followers">
-                    <td>{{u.name}}<span *ngIf="u.type=='Verified'" class="verified">✔</span></td>
-                    <td>{{u.userEmail}}</td>
-                    <td>{{u.type}}</td>
-                    <td><button class="btn btn-primary" (click)="postByUser(u.userId)">Posts</button></td>
-            </tr>
-        </tbody>
-    </table> 
+    <div class="card-container">
+        <div class="card followers" *ngFor="let u of followers">
+            <div class="card-body">
+                <h5 class="card-title">{{u.name}} <span *ngIf="u.type=='Verified'" class="verified">✔</span></h5>
+                <p class="card-text">User Id: {{u.userId}}</p>
+                <p class="card-text">Email: {{u.userEmail}}</p>
+                <!-- <p class="card-text">User Type: {{u.type}}</p> -->
+                <button class="btn btn-primary" (click)="postByUser(u.userId)">Posts</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container">
     <h2 class="mt-4 mb-4">Following</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>User Email</th>
-                <th>User Type</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let u of following">
-                    <td>{{u.name}}<span *ngIf="u.type=='Verified'" class="verified">✔</span></td>
-                    <td>{{u.userEmail}}</td>
-                    <td>{{u.type}}</td>
-                    <td><button class="btn btn-primary" (click)="postByUser(u.userId)">Posts</button></td>
-            </tr>
-        </tbody>
-    </table> 
+    <div class="card-container">
+        <div class="card following" *ngFor="let u of following">
+            <div class="card-body">
+                <h5 class="card-title">{{u.name}} <span *ngIf="u.type=='Verified'" class="verified">✔</span></h5>
+                <p class="card-text">User Id: {{u.userId}}</p>
+                <p class="card-text">Email: {{u.userEmail}}</p>
+                <button class="btn btn-primary" (click)="postByUser(u.userId)">Posts</button>
+            </div>
+        </div>
+    </div>
 </div>

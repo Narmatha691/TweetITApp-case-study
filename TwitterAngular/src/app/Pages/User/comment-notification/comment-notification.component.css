@@ -1,0 +1,43 @@
+.notification-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.notification-card {
+    border-left: 5px solid #007bff;
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.notification-card:hover {
+    transform: translateY(-5px);
+}
+
+.notification-content {
+    padding: 20px;
+}
+
+.notification-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mark-as-read {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+
+.mark-as-read input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.mark-as-read label {
+    color: #666;
+    font-size: 14px;
+}

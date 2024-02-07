@@ -69,6 +69,8 @@ export class ProfileComponent {
       this.http
       .post('http://localhost:5250/api/Follower/SendFollowRequest/',requestBody,this.httpOptions)
       .subscribe((response) => {
+        this.following=false;
+        console.log(this.following);
         console.log(response);
       });
   }

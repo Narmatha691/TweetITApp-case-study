@@ -8,7 +8,7 @@
   <div class="row">
     <div *ngFor="let post of posts" class="col-lg-6 mb-4">
       <!-- Single Card for Post -->
-      <div class="card border-dark post-card">
+      <div class="card post-card">
         <img *ngIf="post.img" [src]="createImgPath(post.img)" alt="Post Image" class="card-img-top custom-image">
         <div class="card-body">
           <h5 class="card-title">{{ 'Title: ' + post.title }}</h5>

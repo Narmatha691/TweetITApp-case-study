@@ -1,5 +1,6 @@
-<br>ng
-    <img *ngIf="post.img" [src]="createImgPath(post.img)" alt="Post Image" class="card-img-top custom-image img-thumbnail">
+<br>
+<div class="post-container">
+  <img *ngIf="post.img" [src]="createImgPath(post.img)" alt="Post Image" class="custom-image ">
   
     <div class="card-body">
       <h5 class="card-title font-weight-bold">{{ post.title }}</h5>
@@ -43,5 +44,7 @@
    <button class="btn btn-link" (click)="toggleComments()">{{ showComments ? 'Hide Comments' : 'Show Comments' }}</button>
    <button class="btn btn-link" (click)="toggleLikes()">{{ showLikes ? 'Hide Likes' : 'Show Likes' }}</button>
   
+</div>
+    
 
   

@@ -2,10 +2,22 @@
     max-width: 100%;
     height: auto;
     width: 300px;
+    
+    border-radius: 10px;
     transition: transform 0.3s ease; /* Add a transition effect for the transform property */
   }
   
   .custom-image:hover {
     transform: scale(1.1); /* Increase the scale on hover (zoom in) */
+  }
+
+  .post-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ced4da; /* Border color */
+    border-left: 5px solid #007bff;
+    border-radius: 10px;
+    background-color: #fff; /* Background color */
   }
   

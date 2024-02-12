@@ -1,52 +1,77 @@
-.container {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .disabled-button {
-    /* Add your styles for the disabled button, e.g., change the background color */
-    background-color: lightgray;
-    /* Add other styles as needed */
-  }
+.register-form {
+  border-left: 5px solid #007bff;
+  border-right: 5px solid #28a745;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the form */
+  background-color: #f8f9fa; /* Light grey background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
 
-  .captcha-container {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .captcha-label {
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  
-  .captcha {
-    display: flex;
-    align-items: center;
-  }
-  
-  .captcha-code-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .captcha-code {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transform: skewX(-20deg); /* Add a bended text effect */
-  }
-  
-  .strike-through {
-    width: 100%;
-    height: 2px;
-    background-color: #ccc;
-    margin: 0 5px;
-  }
-  
-  .captcha-input {
-    width: 150px;
-    margin-left: 10px;
-  }
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.invalid-feedback {
+  color: #dc3545; /* Red error message */
+}
+
+.captcha-container {
+  display: flex;
+  align-items: center;
+}
+
+.captcha-label {
+  margin-right: 10px;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+}
+
+.captcha-code-container {
+  background-color: #f8f9fa;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.captcha-code {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.captcha-input {
+  flex: 1;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #d39e00;
+  border-color: #d39e00;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
